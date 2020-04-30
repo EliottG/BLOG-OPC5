@@ -6,6 +6,10 @@ use App\Controllers\User\DashboardController;
 use App\Controllers\User\SignInController;
 use App\Controllers\User\LoginController;
 use App\Controllers\User\DisconnectController;
+use App\Controllers\Post\AddPostController;
+use App\Controllers\Post\ListPostsController;
+use App\Controllers\Post\SinglePostController;
+use App\Controllers\Post\UpdatePostController;
 class Router
 {
     private $_url;
@@ -46,6 +50,26 @@ class Router
                 new LoginController();
             } else {
                 new AccueilController();
+            }
+        }
+        if ($url[0] == 'articles' && (!isset($url[1]))) {
+            new ListPostsController();
+        }
+        if ($url[0] == 'article') {
+            if (!empty($url[1]) && (intval($url[1]) > 0)) {
+                new SinglePostController(intval($url[1]));
+            } else {
+                echo '404';
+            }
+        }
+        if ($url[0] == 'modifier-article') {
+            if (!empty($url[1]) && (intval($url[1]) > 0)) {
+                new UpdatePostController($url[1]);
+            }
+        }
+        if ($url[0] == 'ajouter-article') {
+            if ($_SESSION['role'][0] == 'Admin') {
+                new AddPostController();
             }
         }
     }
