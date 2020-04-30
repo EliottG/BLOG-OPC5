@@ -1,0 +1,36 @@
+.form-signin {
+    margin: auto;
+    padding: 1.5em;
+    border: 2px solid grey;
+    border-radius: 10px ;
+
+}
+.form-signin a {
+    
+    text-decoration: none;
+}
+.login-form {
+    padding: 1em;
+    border: 2px solid black;
+    margin-top: 2em;
+    border-radius: 10px;
+}
+.contact-form {
+    padding: 1em;
+    background-color: rgb(94, 159, 189, 0.4);
+}
+.contact-form input {
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid grey;
+}
+.contact-form input::placeholder {
+    color: black;
+}
+.contact-form textarea {
+    border: 2px solid gray;
+    
+}
+.contact-form textarea::placeholder {
+    color: black;
+}

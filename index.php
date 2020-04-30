@@ -1,7 +1,7 @@
 <?php 
 namespace App;
 use App\Config\Router;
-
+use App\Controllers\AccueilController;
 $ini = parse_ini_file('./Config/config.ini');
 define('DB_HOST', $ini['db_host']);
 define('DB_NAME', $ini['db_name']);
@@ -12,4 +12,6 @@ require 'vendor/autoload.php';
 if (!empty($_GET)) {
     $url = explode('/' , $_GET['url']);
     new Router($url);
+}  else {
+    new AccueilController();
 }

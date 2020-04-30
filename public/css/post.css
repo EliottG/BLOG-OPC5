@@ -1,0 +1,56 @@
+a .articleList {
+    
+    
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-decoration: none;
+    transition: all 0.5s;
+    background: linear-gradient(to left, rgba(165, 189, 214, 0.6) ,  rgba(165, 189, 214, 0.7));
+    padding: 1em;
+    
+}
+.articleList:hover {
+    transform: scale(1.02);
+}
+a .articleList p {
+    color: black;
+}
+a .articleList h3 {
+
+padding-bottom: 0.3em;
+color: rgb(94, 159, 189);
+
+
+}
+.articles-admin {
+    border: 1px solid grey;
+    margin-top: 10px;
+    
+}
+.single-title {
+    background-color: rgb(94, 159, 189, 0.8);
+    padding: 0.7em;
+}
+
+.single-chapo {
+    background-color: rgb(94, 159, 189, 0.4);
+    border-bottom: 2px solid rgb(94, 159, 189);
+    
+}
+.single-content {
+    background-color: rgb(94, 159, 189, 0.2);
+    border-bottom: 2px solid rgb(94, 159, 189);
+    padding: 0.6em;
+}
+.single-article {
+    margin-top: 1em;
+    
+    border-right: 2px solid rgb(94, 159, 189);
+    border-left: 2px solid rgb(94, 159, 189);
+}
+.comments {
+    border: 1px solid grey;
+    padding: 0.6em;
+}

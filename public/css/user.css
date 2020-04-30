@@ -1,0 +1,25 @@
+.myArticles {
+    background-color: goldenrod;
+    border-radius: 10px;
+    padding-top: 1em;
+    box-shadow: 1px 1px 1px black;
+    margin-bottom: 10px;
+   
+    
+}
+.myArticles a{
+    color: white;
+    text-align: left;
+    
+}
+.myArticles a:hover {
+    text-decoration: none;
+}
+.myArticles button {
+    margin-left: 20px;
+}
+.my_comments {
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 1px solid black;
+}

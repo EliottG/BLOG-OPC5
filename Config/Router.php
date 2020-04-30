@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Config;
-
+use App\Controllers\AccueilController;
 class Router
 {
     private $_url;
@@ -12,6 +12,8 @@ class Router
     }
     public function routing($url)
     {
-        
+        if ($url[0] == 'accueil' && (!isset($url[1]))) {
+            new AccueilController();
+        }
     }
 }
