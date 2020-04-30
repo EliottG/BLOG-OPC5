@@ -2,6 +2,8 @@
 namespace App;
 use App\Config\Router;
 use App\Controllers\AccueilController;
+session_start();
+
 $ini = parse_ini_file('./Config/config.ini');
 define('DB_HOST', $ini['db_host']);
 define('DB_NAME', $ini['db_name']);
