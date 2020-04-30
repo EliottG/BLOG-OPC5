@@ -10,6 +10,7 @@ use App\Controllers\Post\AddPostController;
 use App\Controllers\Post\ListPostsController;
 use App\Controllers\Post\SinglePostController;
 use App\Controllers\Post\UpdatePostController;
+use App\Controllers\Comment\CommentController;
 class Router
 {
     private $_url;
@@ -71,6 +72,9 @@ class Router
             if ($_SESSION['role'][0] == 'Admin') {
                 new AddPostController();
             }
+        }
+        if ($url[0] == 'commentaire' && (isset($url[1])) && (intval($url[1]) > 0)) {
+            new CommentController($url[1]);
         }
     }
 }
