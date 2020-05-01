@@ -20,10 +20,10 @@ class AccueilController
   public function sendMail()
   {
     $success = true;
-    $name = htmlspecialchars($_POST['name']);
-    $firstname = htmlspecialchars($_POST['firstname']);
-    $email = htmlspecialchars($_POST['email']);
-    $content = htmlspecialchars($_POST['content']);
+    $name =filter_var($_POST['name'], FILTER_SANITIZE_SPECIAL_CHARS);
+    $firstname = filter_var($_POST['firstname'], FILTER_SANITIZE_SPECIAL_CHARS);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_SPECIAL_CHARS);
+    $content = filter_var($_POST['content'], FILTER_SANITIZE_SPECIAL_CHARS);
 
     if (empty($name)) {
       $success = false;
