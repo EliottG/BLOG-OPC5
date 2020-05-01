@@ -52,11 +52,11 @@ class AdminController
     {
         $comment = new CommentsModel();
         $comment->validComment($id);
-        header('Location:' . ROOT_DIR . 'administration');
+        header('Location:' . htmlentities(ROOT_DIR) . 'administration');
     }
     public function supprPost($id) {
         $post = new PostsModel();
         $post->supprPost($id);
-        header('Location:' . ROOT_DIR . 'administration');
+        header('Location:' . htmlentities(ROOT_DIR) . 'administration');
     }
 }

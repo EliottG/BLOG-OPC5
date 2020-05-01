@@ -6,7 +6,7 @@ $title = 'Ajouter un article';
 ?>
 <div class="container">
     <h3 class='mt-3 mb-5 text-center'>Ajouter un article</h3>
-    <form action="<?= ROOT_DIR ?>ajouter-article" method="POST">
+    <form action="<?= htmlentities(ROOT_DIR) ?>ajouter-article" method="POST">
         <input class=' form-control mb-3' required name="author" placeholder="Auteur">
         <input class=' form-control mb-3' required name="title" placeholder="Titre">
         <textarea class='form-control mb-3' required name="chapo" id="" cols="30" rows="4" placeholder="Chapô"></textarea>

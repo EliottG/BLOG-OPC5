@@ -13,11 +13,11 @@ $title = 'Accueil';
                 <a target="_blank" href="https://www.linkedin.com/in/eliott-geoffroy-deudon-combe-796593194/"><img src="public/pictures/social/linkedin.svg" alt="linkedin logo" width="48px"></a>
                 <a target="_blank" href="https://github.com/EliottG"><img class=" " src="public/pictures/social/github.svg" alt="github logo" width="51px"></a>
                 <a target="_blank" href="https://gitlab.com/EliottG"><img src="public/pictures/social/gitlab.svg" alt="github logo" width="51px"></a>
-                <a href="<?= ROOT_DIR ?>#cv">
-                    <img src="<?= ROOT_DIR ?>public/pictures/social/cv.png" alt="Plein écran">
+                <a href="<?= htmlentities(ROOT_DIR) ?>#cv">
+                    <img src="<?= htmlentities(ROOT_DIR) ?>public/pictures/social/cv.png" alt="Plein écran">
                 </a>
-                <a href="<?= ROOT_DIR ?>#_" class="overlay" id="cv">
-                        <img src="<?= ROOT_DIR ?>public/pictures/BigCv.jpg" alt="Plein écran">
+                <a href="<?= htmlentities(ROOT_DIR) ?>#_" class="overlay" id="cv">
+                        <img src="<?= htmlentities(ROOT_DIR) ?>public/pictures/BigCv.jpg" alt="Plein écran">
                 </a>
             </div>
         </div>
@@ -53,7 +53,7 @@ $title = 'Accueil';
 <div class="container contact mt-5 mb-5">
     <h2 class="text-center mb-4">Me contacter</h2>
     <div class="contact-form">
-        <form action='<?= ROOT_DIR ?>accueil' class="text-center" method="POST">
+        <form action='<?= htmlentities(ROOT_DIR) ?>accueil' class="text-center" method="POST">
             <div class="row">
                 <div class="col-xl-6">
                     <input class="col-xl-12 form-control mb-3" required name="name" placeholder="Nom">
