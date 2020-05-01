@@ -18,7 +18,8 @@ $title = 'Administration';
                     <form method="POST" action="<?= ROOT_DIR ?>administration">
                         <button type="submit" name="suppr" value="<?= $post['ID'] ?>" class='btn btn-danger mb-2'>Supprimer</button>
                     </form>
-                    <p class='text-left ml-1'> <a href="<?= ROOT_DIR ?>article/<?= $post['ID'] ?>"><button class='btn btn-primary mr-3'>Voir</button></a><?= $post['title'] ?></p>
+                    <p class='text-left ml-1'> <a href="<?= ROOT_DIR ?>article/<?= $post['ID'] ?>">
+                    <button class='btn btn-primary mr-3'>Voir</button></a><?= $post['title'] ?></p>
                 </div>
             <?php endforeach ?>
         </div>
@@ -28,7 +29,7 @@ $title = 'Administration';
                 <p class='text-justify'>
                     <form method="POST" action="<?= ROOT_DIR ?>administration">
                         <button type="submit" name="validate" value="<?= $comment['ID'] ?>" class='btn btn-primary mr-3'>Valider</button>
-                    </form><?= $comment['content'] ?>
+                    </form><p class="text-center"><span class='bold'><?= $comment['author'] ?></span> : <?= $comment['content'] ?></p>
                 </p>
             <?php endforeach ?>
         </div>

@@ -21,10 +21,14 @@ class SinglePostController
         $post = new PostsModel;
         $allComments = new PostsModel();
         $singlePost = $post->getPost($id);
+        if (!empty($singlePost )) {
         $comments = $allComments->getCommentsPost($id);
         new View('Views/post/viewPost.php', array(
             'post' => $singlePost,
             'comments' => $comments
         ));
+    } else {
+        require 'Views/404.php';
+    }
     }
 }

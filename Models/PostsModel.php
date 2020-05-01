@@ -85,7 +85,7 @@ class PostsModel extends Model
     public function getComments()
     {
         $db = $this->getDb();
-        $this->req = $db->query('SELECT content, ID FROM comment_post WHERE is_validate = 0');
+        $this->req = $db->query('SELECT content, ID, author FROM comment_post WHERE is_validate = 0');
         $this->data = $this->req->fetchAll();
         return $this->data;
     }
