@@ -11,9 +11,9 @@ define('DB_USER', $ini['db_user']);
 define('DB_PASSWORD', $ini['db_password']);
 define('ROOT_DIR', $ini['ROOT_DIR']);
 require 'vendor/autoload.php';
-$get = htmlspecialchars($_GET['url']);
+
 if (!empty($_GET)) {
-    $url = explode('/' , $get);
+    $url = explode('/' , $_GET['url']);
     new Router($url);
 }  else {
     new AccueilController();
