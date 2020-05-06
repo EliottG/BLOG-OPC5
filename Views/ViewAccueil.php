@@ -1,8 +1,8 @@
 <?php
 
 $title = 'Accueil';
-
 ?>
+
 <div class="container-fluid home_banner">
     <div class="container">
         <div class="profil-block">

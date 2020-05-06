@@ -28,7 +28,7 @@ class CommentController
             $addComment = new CommentsModel;
             $addComment->addComments($_SESSION['pseudo'], $content, $post, $_SESSION['id'][0][0]);    
             
-            $_SESSION['message'] = "Commentiare ajouté";
+            $_SESSION['message'] = "Commentaire bien ajouté ! Veuillez attendre la validation d'un administrateur pour le voir apparaître";
             
             header('Location:' . ROOT_DIR . 'article/' . $post);
         }
