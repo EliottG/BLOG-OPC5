@@ -20,6 +20,10 @@
 <body>
   <?php
   require 'header.php';
+if( $flash ){
+  echo '<div>'.$flash.'</div>';  
+}
+
   echo $content;
   require 'footer.php';
   ?>

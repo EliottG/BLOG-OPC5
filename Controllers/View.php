@@ -12,6 +12,12 @@ class View
         ob_start();
         require $path;
         $content = ob_get_clean();
+
+        $flash = false;
+        if(isset($_SESSION['message']) && $_SESSION['message']){
+            $flash = $_SESSION['message'];
+            unset($_SESSION['message']);
+        }
         require 'Views/template.php';
     }
 }
