@@ -24,9 +24,12 @@ class CommentController
     public function verifAddComments($post)
     {
         if (!empty($_POST['content'])) {
-            $content = htmlspecialchars($_POST['content']);
+            $content = $_POST['content'];
             $addComment = new CommentsModel;
-            $addComment->addComments($_SESSION['pseudo'], $content, $post, $_SESSION['id'][0][0]);            
+            $addComment->addComments($_SESSION['pseudo'], $content, $post, $_SESSION['id'][0][0]);    
+            
+            $_SESSION['message'] = "Commentaire bien ajouté ! Veuillez attendre la validation d'un administrateur pour le voir apparaître";
+            
             header('Location:' . ROOT_DIR . 'article/' . $post);
         }
     }

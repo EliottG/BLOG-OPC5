@@ -13,6 +13,6 @@ $title = "Se connecter";
         </form>
     </div>
     <?php if (isset($data['error'])) : ?>
-        <div class="mt-2 alert alert-danger text-center"> <?= $data['error'] ?></div>
+        <div class="mt-2 alert alert-danger text-center"> <?= htmlspecialchars($data['error']) ?></div>
     <?php endif ?>
 </div>

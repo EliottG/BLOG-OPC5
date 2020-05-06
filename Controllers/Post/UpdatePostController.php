@@ -37,10 +37,10 @@ class UpdatePostController
     {
         $post = new PostsModel();
         if (!empty($_POST['author']) && !empty($_POST['title']) && !empty($_POST['chapo']) && !empty($_POST['content'])) {
-            $author = htmlspecialchars($_POST['author']);
-            $title  = htmlspecialchars($_POST['title']);
-            $chapo = htmlspecialchars($_POST['chapo']);
-            $content = htmlspecialchars($_POST['content']);
+            $author = $_POST['author'];
+            $title  = $_POST['title'];
+            $chapo = $_POST['chapo'];
+            $content = $_POST['content'];
             $post->updatePost($this->_id, $author, $title, $chapo, $content);
             $ini = parse_ini_file(dirname(__DIR__) . '/config/config.ini');
             header('Location:' . ROOT_DIR . 'article/' . $this->_id);
