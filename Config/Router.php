@@ -84,9 +84,11 @@ class Router
             }
         }
         if ($url[0] == 'commentaire' && (isset($url[1])) && (intval($url[1]) > 0)) {
+            if (isset($_SESSION['id'])) {
             new CommentController($url[1]);
             $this->_404 = '';
         }
+    }
         if ($url[0] == 'administration') {
             if (isset($_SESSION['id']) && ($_SESSION['role'][0] == 'Admin')) {
 
