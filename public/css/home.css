@@ -34,7 +34,7 @@ img.profil-picture {
 }
 
 .social-block a {
-    padding: 1em;
+    padding: 2em;
     border-radius: 10px;
     transition: all 0.2s;
 }
@@ -48,6 +48,7 @@ img.profil-picture {
     padding: 1em;
     box-shadow: gray 1px 1px 1px;
     border-radius: 10px;
+    
 }
 
 .explication1 h3 {
@@ -55,6 +56,7 @@ img.profil-picture {
 }
 
 .explication1 p {
+    padding: 1em;
     color: white;
 }
 
@@ -63,6 +65,10 @@ img.profil-picture {
     padding: 1em;
     box-shadow: gray 1px 1px 1px;
     border-radius: 10px;
+    
+}
+.explication2 p {
+    padding: 1em;
 }
 
 .explication2 h3 {

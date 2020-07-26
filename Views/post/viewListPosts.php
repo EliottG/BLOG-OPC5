@@ -12,9 +12,9 @@ $title = 'Articles';
         <div class="col-xl-6">
         <a href="<?= htmlspecialchars(ROOT_DIR) ?>article/<?= htmlspecialchars($post['ID']) ?>">
             <div class="articleList mt-3">
-                <h3 class="text-center"><?= htmlspecialchars($post['title']) ?> / <span class="color-grey"> <?= htmlspecialchars($post['author']) ?> </span></h3>
+                <h3 class="text-center"><?= htmlspecialchars(substr($post['title'],0,40)).' ... ' ?> / <span class="color-grey"> <?= htmlspecialchars($post['author']) ?> </span></h3>
                 <p> Dernière modification: <?= htmlspecialchars($post['last_update']) ?></p>
-                <p class="text-center"><?= htmlspecialchars(substr($post['chapo'], 0, 150)) .'...' ?></p>
+                <p class="text-center"><?= htmlspecialchars(substr($post['chapo'], 0, 150)) .' ... ' ?></p>
             </div>
         </a>
         </div>

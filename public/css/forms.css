@@ -17,8 +17,9 @@
 }
 
 .contact-form {
-    padding: 1em;
+    padding: 3em;
     background-color: rgb(94, 159, 189, 0.4);
+    border-radius: 10px;
 }
 
 .contact-form input {
