@@ -2,6 +2,7 @@
 $title = 'Ajouter un commentaire';
 
 ?>
+<body class='PostPage'>
 <div class="container">
     <h3>Poster un commentaire</h3>
     <form action="<?= htmlspecialchars(ROOT_DIR) ?>commentaire/<?= $data['ID'] ?>" method="POST">

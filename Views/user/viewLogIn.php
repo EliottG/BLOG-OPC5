@@ -2,6 +2,7 @@
 $title = "S'inscire";
 
 ?>
+<body class='PostPage'>
 <div class="container">
     <div class="login-form">
         <h3 class='text-center'>Formulaire d'inscription</h3>

@@ -4,6 +4,7 @@ $title = htmlspecialchars($data['post']['title']);
 
 ?>
 <br>
+<body class='PostPage'>
 <div class="container">
     <a href="<?= htmlspecialchars(ROOT_DIR) ?>articles"><button class='btn btn-primary'> Revenir aux articles </button></a><br>
     <div class="single-article">
@@ -19,3 +20,4 @@ $title = htmlspecialchars($data['post']['title']);
         <p class='mt-3 comments'> <?= htmlspecialchars($comment['creation_date']). ' - ' . "<span class='bold'>" . htmlspecialchars($comment['author']) ?> </span> : <?= htmlspecialchars($comment['content']) ?></p>
     <?php endforeach ?>
 </div>
+</body>

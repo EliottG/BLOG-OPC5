@@ -2,6 +2,7 @@
 $title = '404';
 ob_start();
 ?>
+<body class='PostPage'>
 <div class="container">
     <h1 class="error text-center">404</h1>
     <h3 class='text-center'>Not found</h3>

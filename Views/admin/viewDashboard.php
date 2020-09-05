@@ -1,7 +1,7 @@
 <?php
 $title = 'Administration';
 ?>
-
+<body class='PostPage'>
 <h1 class='text-center mt-5'>Administration</h1>
 <div class="container">
     <div class="row">

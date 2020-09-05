@@ -1,18 +1,21 @@
 .form-signin {
     margin: auto;
     padding: 1.5em;
-    border: 2px solid grey;
+   
     border-radius: 10px;
+    background-color: white;
 }
 
 .form-signin a {
     text-decoration: none;
+    background-color: white;
 }
 
 .login-form {
     padding: 1em;
-    border: 2px solid black;
+   
     margin-top: 2em;
+    background-color: white;
     border-radius: 10px;
 }
 

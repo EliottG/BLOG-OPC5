@@ -4,6 +4,7 @@ $title = 'Modifier un article';
 
 
 ?>
+<body class='PostPage'>
 <div class="container">
     <h3 class="mt-5 mb-5 text-center">Modifier mon article</h3>
     <form action="<?= htmlentities(ROOT_DIR) ?>modifier-article/<?= $data['update']['ID'] ?>" method="POST">

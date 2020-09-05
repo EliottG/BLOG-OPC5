@@ -1,6 +1,7 @@
 <?php
 $title = "Se connecter";
 ?>
+<body class='PostPage'>
 <div class="container">
     <h3 class='text-center mt-4 mb-3'>Se connecter</h3>
     <div class="form-signin">

@@ -2,6 +2,7 @@
 $title = "Mon compte";
 
 ?>
+<body class='PostPage'>
 <div class="container">
     <h3 class="mt-3 mb-5 text-center">Tableau de bord de <?= $_SESSION['pseudo'] ?></h3>
     <div class="row">

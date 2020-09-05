@@ -1,37 +1,24 @@
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark pt-4 pb-4 shadow">
-    <a class="navbar-brand" href="<?= htmlentities(ROOT_DIR) ?>accueil">Blog</a>
-    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-            <li class="nav-item <?php if ($title == 'Accueil') {
-                                    echo 'active';
-                                } ?>">
-                <a class="nav-link text-uppercase" href="<?= htmlentities(ROOT_DIR) ?>accueil">Accueil <span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item <?php if ($title == 'Articles') {
-                                    echo 'active';
-                                } ?>">
-                <a class="nav-link text-uppercase" href="<?= htmlentities(ROOT_DIR) ?>articles">Articles</a>
-            </li>
-            <li class="nav-item dropdown <?php if ($title == 'Mon compte') {
-                                                echo 'active';
-                                            } ?>">
-                <a class="nav-link dropdown-toggle text-uppercase" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Membre</a>
-                <div class="dropdown-menu" aria-labelledby="dropdownId">
-                    <?php if (isset($_SESSION['id'])) : ?>
+
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="<?= htmlentities(ROOT_DIR) ?>accueil">Mon Blog</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?= htmlentities(ROOT_DIR) ?>articles">Articles</a></li>
+                        <?php if (isset($_SESSION['id'])) : ?>
                         <?php if (isset($_SESSION['role']) && ($_SESSION['role'][0]) == 'Admin') : ?>
-                            <a class="dropdown-item" href="<?= htmlentities(ROOT_DIR) ?>administration">Administration</a>
+                            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?= htmlentities(ROOT_DIR) ?>administration">Administration</a></li>
                         <?php endif ?>
-                        <a class="dropdown-item" href="<?= htmlentities(ROOT_DIR) ?>compte">Mon compte</a>
-                        <a class="dropdown-item" href="<?= htmlentities(ROOT_DIR) ?>deconnexion">Se déconnecter</a>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?= htmlentities(ROOT_DIR) ?>compte">Mon compte</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?= htmlentities(ROOT_DIR) ?>deconnexion">Se déconnecter</a></li>
                     <?php else : ?>
-                        <a class="dropdown-item" href="<?= htmlentities(ROOT_DIR) ?>connexion">Se connecter</a>
-                        <a class="dropdown-item" href="<?= htmlentities(ROOT_DIR) ?>inscription">S'inscrire</a>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?= htmlentities(ROOT_DIR) ?>connexion">Se connecter</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?= htmlentities(ROOT_DIR) ?>inscription">S'inscrire</a></li>
                     <?php endif ?>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="<?= htmlentities(ROOT_DIR) ?>#contact">Contact</a></li>
+                    </ul>
                 </div>
-            </li>
-        </ul>
-    </div>
-</nav>
+            </div>
+        </nav>
